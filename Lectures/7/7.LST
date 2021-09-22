@@ -1,0 +1,23 @@
+     1                                  [org 0x0100]
+     2                                  
+     3 00000000 8A26[1700]              mov ah, [num1]
+     4                                  
+     5 00000004 8A3E[1800]              mov bh ,[num1+1]
+     6                                  
+     7 00000008 00DC                    add ah ,bl ; we can add ah with bl   
+     8                                  
+     9 0000000A 88E3                    mov bl, ah  ; we can move the value of ah into bl as well
+    10                                  
+    11 0000000C 00FC                    add ah ,bh
+    12                                  
+    13 0000000E 8826[1A00]              mov [num1+3], ah
+    14                                  
+    15 00000012 B8004C                  mov ax, 0x4c00
+    16                                  
+    17 00000015 CD21                    int 0x21
+    18                                  
+    19 00000017 050A0F00                num1: db 5,10,15,0
+    20                                  
+    21                                  
+    22                                  
+    23                                  
