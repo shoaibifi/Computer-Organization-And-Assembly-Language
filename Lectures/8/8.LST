@@ -1,0 +1,28 @@
+     1                                  [org 0x0100]
+     2                                  
+     3 00000000 B88787                  mov ax , 0x8787
+     4                                  
+     5 00000003 31C0                    xor ax, ax ; BY doing this the ax will become 0000
+     6                                  
+     7 00000005 A0[1C00]                mov al, [num1]
+     8                                  
+     9 00000008 8A1E[1D00]              mov bl, [num1+1]
+    10                                  
+    11 0000000C 00D8                    add al, bl
+    12                                  
+    13 0000000E 8A1E[1E00]              mov bl, [num1+2]
+    14                                  
+    15 00000012 00D8                    add al, bl
+    16                                  
+    17 00000014 A2[1F00]                mov [num1+3], al
+    18                                  
+    19                                  
+    20 00000017 B8004C                  mov ax , 0x4c00
+    21                                  
+    22 0000001A CD21                    int 0x21
+    23                                  
+    24 0000001C 050A080A                num1: db 5, 10, 8,10
+    25                                  
+    26                                  
+    27                                  
+    28                                  
