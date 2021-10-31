@@ -10,16 +10,11 @@
 
 
 
-       ; for finding the maximum
+       ; code to find minimum
         
         mov ax, [num]
 
         mov bx, 2
-
-       
-        ; code to find minimum
-       
-       
 
         maximum:
 
